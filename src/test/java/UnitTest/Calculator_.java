@@ -49,5 +49,9 @@ public class Calculator_ {
     public void large_number_throw_a_exception() throws Exception {
         assertThat(calc.calculate("1001,1,2")).isEqualTo(3);
     }
+    @Test
+    public void large_number_with_newline_throw_a_exception() throws Exception {
+        assertThat(calc.calculate("1001\n1\n2")).isEqualTo(3);
+    }
 
 }
